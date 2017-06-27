@@ -77,7 +77,7 @@ class EditorFileReference extends FilterBase implements ContainerFactoryPluginIn
         if ($node->hasAttribute('src')) {
           $file = $this->entityManager->loadEntityByUuid('file', $uuid);
           if ($file) {
-            $node->setAttribute('src', file_url_transform_relative(file_create_url($file->getFileUri())));
+            $node->setAttribute('src', file_create_url($file->getFileUri()));
           }
         }
 
